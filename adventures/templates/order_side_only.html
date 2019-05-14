@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <html>
+	<head>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'style.css' %}"/>
+        <link rel="stylesheet" href="{% static 'reset.css' %}">
+	</head>
+	<body>
+
+			<div id="wrapper">
+
+                 
+					<header id="header">
+						<span class="avatar"><img src="{% static 'logo.jpg' %}" width="200" height="200" alt="" /></span>
+						<h1>주문할 사이드 메뉴를 <strong>클릭</strong> 해주세요. </h1>
+
+					</header>
+
+				<!-- Main -->
+					<section id="main">
+
+							<section class="thumbnails">
+								<div>
+                                        <a href="{% url 'order_complete' %}"><img src="{% static 'side6.PNG' %}"/> </a>
+										<a href="{% url 'order_complete' %}"><img src="{% static 'side1.PNG' %}"/> </a>
+								</div>
+
+								<div>
+										<a href="{% url 'order_complete' %}"><img src="{% static 'side2.PNG' %}"/> </a>
+										<a href="{% url 'order_complete' %}"><img src="{% static 'side3.PNG' %}"/> </a>
+								</div>
+
+								<div>
+										<a href="{% url 'order_complete' %}"><img src="{% static 'side4.PNG' %}"/> </a>
+										<a href="{% url 'order_complete' %}"><img src="{% static 'side5.PNG' %}"/> </a>
+									
+								</div>
+							</section>
+
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<center>
+						 <a href="{% url 'exit' %}"> <h2><strong>사이드 선택안함(클릭)</strong> </h2> </a>
+						</center>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
+
+<style type="text/css">
+body{
+  background-color: rgba(210,210,210,0.5);
+  background-size: cover;
+}
+
+#wrapper{
+  max-width:55rem;
+  margin: 3rem auto;
+}
+
+#header{
+  text-align: center;
+  padding-top:2rem;
+  padding-bottom: 2rem;
+}
+
+#header ul.icons li{
+  display: inline-block;
+}
+
+#header .avatar {
+  border-radius: 100%;
+  display:inline-block;
+  padding:0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#header .avatar img{
+  border-radius: 100px;
+  display:block;
+}
+#header h1{
+  font-size:1.5rem;
+  color: rgba(239,122,1,1);
+  margin-bottom: 1.5rem;
+  line-height: 2.3rem;
+}
+#header h1 strong{
+  color:blue;
+}
+
+h2{
+    padding-top:0.5rem;
+    color: rgba(239,122,1,1);
+}
+
+
+#main .thumbnails img:hover{
+  border:1px solid rgba(0,0,0,0.5);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#header ul.icons li a{
+  color: rgba(0,0,0,0.5);
+  text-decoration: none;
+}
+
+#header ul.icons li .label{
+  display: none;
+}
+
+#main .thumbnails {
+  display: flex;
+}
+
+#main .thumbnails>div{
+  flex-grow:1;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+#main .thumbnails a{
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+#main .thumbnails img{
+  width:100%;
+  border-top-right-radius: 0.3rem;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  display: block;
+}
+
+#main .thumbnails h3{
+  border-left:1px solid rgba(0,0,0,0.5);
+  border-right:1px solid rgba(0,0,0,0.5);
+  border-bottom:1px solid rgba(0,0,0,0.5);
+  border-bottom-left-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+  padding:1rem;
+  text-align:center;
+  background-color: rgba(255,255,255,0.2);
+  margin-bottom: 1.5rem;
+
+}
+
+</style>
+
+{% endblock %}

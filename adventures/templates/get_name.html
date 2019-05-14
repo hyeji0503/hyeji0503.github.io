@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+  <html>
+	<head>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+ 
+	</head>
+	<body>
+
+			<div id="wrapper">
+
+                 
+					<header id="header">
+						<span class="avatar"><img src="{% static 'delivery.jpg' %}" width="200" height="200" alt="" /></span>
+						<h1> 주문완료 </h1>
+
+					</header>
+
+				<!-- Main -->
+				    <body>
+				        <center>
+				        <h2>{{name}}로 배달해드리겠습니다.</h2>
+                        </center>
+				    </body>
+				
+
+				<!-- Footer -->
+					<footer id="footer">
+						<center>
+						<p>&copy; All rights reserved. Design: hyejiyang.
+						</center>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
+
+<style type="text/css">
+body{
+  background-color: rgba(210,210,210,0.5);
+  background-size: cover;
+}
+
+#wrapper{
+  max-width:68rem;
+  margin: 3rem auto;
+}
+
+#header{
+  text-align: center;
+  padding-top:2rem;
+  padding-bottom: 2rem;
+}
+
+
+#header .avatar {
+  border-radius: 100%;
+  display:inline-block;
+  padding:0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#header .avatar img{
+  border-radius: 100px;
+  display:block;
+}
+#header h1{
+  font-size:2rem;
+  color:rgba(239,122,1,1);
+  margin-bottom: 1.5rem;
+  line-height: 2.3rem;
+}
+#header h1 strong{
+  color:blue;
+}
+
+
+footer{
+      padding-top: 10rem;
+}
+
+</style>
+
+    
+{% endblock %}
